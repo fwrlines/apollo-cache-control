@@ -159,7 +159,7 @@ export class CacheControlExtension<TContext = any>
       if (overallCachePolicy) {
         o.graphqlResponse.http.headers.set(
           'Cache-Control',
-          `max-age=${
+          `s-maxage=604800, max-age=${
             overallCachePolicy.maxAge
           }, ${overallCachePolicy.scope.toLowerCase()}`,
         );
